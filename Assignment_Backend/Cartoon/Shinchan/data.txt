@@ -1,0 +1,93 @@
+query{
+  allMovies{
+    id
+    Title
+    IMDB
+    Cover
+    Year
+    Duration
+  }
+  allSeries{
+    id
+    Season
+    Episodes
+    ReliseYear
+  }
+  singleMovie(id:2){
+    id
+    Title
+  }
+  singleSeries(id:2){
+    id
+    Season
+    Episodes
+  }
+  
+}
+}
+
+
+POST Request for series
+
+mutation firstmutation{
+    addSeries(Season:6,Episodes:57,Relise_Year:2016){
+        series{
+            Season
+            Episodes
+            Relise_Year
+        }
+
+    }
+}
+
+POST FOR Movies
+mutation firstmutaion{
+  addMovies(Title:"HELLO EVERONE WANA PALAY GAME",IMDB:7.0,Duration:80,Cover:"hello.jpg",Year:"2015-12-24"){
+    mov{
+      Title
+      IMDB
+      Duration
+      Cover
+      Year
+    }
+  }
+}
+
+
+PUT request for Movies
+mutation firstmutation{
+  updateMovie(id:1,Title:"saurabh"){
+    movie{
+      Title
+    }
+  }
+  
+}
+
+PUT request for series
+mutation firstmutaion{
+  updateSeries(id:2,Episod:99){
+    seriess{
+      Episodes
+    }
+  }
+  }
+
+
+Delete
+mutation firstmutation{
+  updateMovie(id:1){
+    movie{
+      Title
+    }
+  }
+  
+}
+
+Delete from seriesmutation firstmutaion{
+  deleteSeries(id:6){
+    series{
+      Season
+    }
+  }
+  }
